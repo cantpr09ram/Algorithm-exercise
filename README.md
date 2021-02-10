@@ -1,6 +1,6 @@
-##Algorithm
+## Algorithm
 
-#sort
+# sort
 
 *bubble_sort
 
@@ -19,7 +19,7 @@
 
 ```
 
-#search
+# search
 
 *binary_search
 
