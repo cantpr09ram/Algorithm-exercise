@@ -2,7 +2,7 @@
 
 # sort
 
-*bubble_sort
+* bubble_sort
 
 ```c++
     for(int i;i<=10-1;i++){
@@ -13,7 +13,7 @@
                 array[j+1] = change;
 ```
 
-*selection_sort
+* selection_sort
 
 ```
 
@@ -21,7 +21,7 @@
 
 # search
 
-*binary_search
+* binary_search
 
 ```c++
     while( (find == 0) && (d <= u) ){
@@ -42,7 +42,7 @@
     }
 ```
 
-*sequential_search
+* sequential_search
 
 ```c++
 	for(int ans=0; ans<10; ans++){
