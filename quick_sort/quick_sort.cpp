@@ -1,25 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int Partition(int array[], int front, int end){
-    int pivot = array[end];
-    int i = front -1;
-    for (int j = front; j < end; j++) {
-        if (array[j] < pivot) {
-            i++;
-            swap(array[i], array[j]);
-        }
-    }
-    i++;
-    swap(array[i],array[end]);
-    return i;
-}
 
-void QuickSort(int *arr, int front, int end){
+void QuickSort(int array[], int front, int end){
     if (front < end) {
-        int pivot = Partition(arr, front, end);
-        QuickSort(arr, front, pivot - 1);
-        QuickSort(arr, pivot + 1, end);
+        int pivot = array[end];
+        int i = front -1;
+        for (int j = front; j < end; j++) {
+            if (array[j] < pivot) {
+                i++;
+                swap(array[i], array[j]);
+            }
+        }
+        i++;
+        swap(array[i],array[end]);
+        QuickSort(array, front, pivot - 1);
+        QuickSort(array, pivot + 1, end);
     }
 }
 
