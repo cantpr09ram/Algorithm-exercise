@@ -23,22 +23,21 @@ void QuickSort(int *arr, int front, int end){
         QuickSort(arr, pivot + 1, end);
     }
 }
-void PrintArray(int *arr, int size){
-    for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
-    }
-    std::cout << std::endl;
-}
+
 int main() {
 
     int n = 9;
-    int arr[] = {9, 4, 1, 6, 7, 3, 8, 2, 5};
-    std::cout << "original:\n";
-    PrintArray(arr, n);
-
+    int array[] = {9, 4, 1, 6, 7, 3, 8, 2, 5};
+    cout << "before sort"<<endl;
+    for(int i; i<10;i++){
+    	cout<<"array[i]";
+	}
+	cout<<endl;
     QuickSort(arr, 0, n-1);
 
-    std::cout << "sorted:\n";
-    PrintArray(arr, n);
+    cout << "after sort"<<endl;
+    for(int i;i<10;i++){
+    	cout<<array[i];
+	}
     return 0;
 }
