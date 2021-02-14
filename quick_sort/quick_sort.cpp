@@ -1,11 +1,8 @@
 // C++ code
 
 #include <iostream>
-void swap(int *a, int *b){
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+using namespace std;
+
 int Partition(int *arr, int front, int end){
     int pivot = arr[end];
     int i = front -1;
