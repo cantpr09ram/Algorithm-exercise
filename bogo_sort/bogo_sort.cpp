@@ -1,15 +1,14 @@
 #include <iostream>
 #include <random>
 using namespace std;
-int main()
-{
+int main(){
   std::random_device rd;
   std::default_random_engine gen = std::default_random_engine(rd());
   std::uniform_int_distribution<int> dis(1,10);
   int n = 10;
   int array[] = {0,9,8,7,6,5,4,3,2,1};
   
-  while(1){
+  while(true){
     int numbers[10];
     int answers[10];
     for (int i=0; i<10; ++i){
@@ -30,7 +29,10 @@ int main()
         break;
       }
     }
-    
-  }
+    cout<<"after sort"<<endl;
+    for(int i; i<10; i++){
+      cout<<answers[i];
+    }    
   return 0;
+  }
 }
