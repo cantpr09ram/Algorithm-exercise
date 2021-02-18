@@ -1,34 +1,46 @@
-#include<iostream>
-#include<cstdlib>
-using namespace std;
-int main()
-{         
-   
-    srand(time(NULL)); //給定亂樹種子
-    int n[4];
-   
-    cout<<"4個介於0~9的不重複隨機亂數為:";
-   
-    for(int i =0;i<4;i++)
-    {                        
-        n[i] = rand()%10;  // rand()%(最大值-最小值+1)+ 最小值 值放進陣列
-        
-        for(int j=0;j<i;j++)  //跑我之前已經產生的結果
-        {
-             if(n[i]==n[j])  //比較值是否已經存在
-             {
-                 i--;
-                 break;
-             }
-        }
-    }
-   
-   
-    for(int i=0;i<4;i++)
-    {
-       cout<<n[i]<<" ";
-    }
-    cout<<endl;
-    system("pause");
-    return 0;   
-}
+#include<iostream> 
+using namespace std; 
+  
+// To check if array is sorted or not 
+bool isSorted(int a[], int n) 
+{ 
+    while (--n > 1) 
+        if (a[n] < a[n - 1]) 
+            return false; 
+    return true; 
+} 
+  
+// To generate permuatation of the array 
+void shuffle(int a[], int n) 
+{ 
+    for (int i = 0; i < n; i++) 
+        swap(a[i], a[rand() % n]); 
+} 
+  
+// Sorts array a[0..n-1] using Bogo sort 
+void bogosort(int a[], int n) 
+{ 
+    // if array is not sorted then shuffle 
+    // the array again 
+    while (!isSorted(a, n)) 
+        shuffle(a, n); 
+} 
+  
+// prints the array 
+void printArray(int a[], int n) 
+{ 
+    for (int i = 0; i < n; i++) 
+        printf("%d ", a[i]); 
+    printf("\n"); 
+} 
+  
+// Driver code 
+int main() 
+{ 
+    int a[] = { 3, 2, 5, 1, 0, 4 }; 
+    int n = sizeof a / sizeof a[0]; 
+    bogosort(a, n); 
+    printf("Sorted array :\n"); 
+    printArray(a, n); 
+    return 0; 
+} 
