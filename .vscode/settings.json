@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "algorithm": "c",
+        "iterator": "c",
+        "random": "c",
+        "streambuf": "c",
+        "type_traits": "c",
+        "vector": "c",
+        "xiosbase": "c",
+        "xlocale": "c",
+        "xlocnum": "c",
+        "xmemory": "c",
+        "xstring": "c",
+        "xtr1common": "c",
+        "xutility": "c"
+    }
+}
