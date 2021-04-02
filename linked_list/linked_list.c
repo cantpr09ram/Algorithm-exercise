@@ -25,6 +25,11 @@ int main(void){
     }
     current = frist;
     while (current != NULL){
-        
+        printf("address = %p, :",current);
+        printf("data = %d, ",current -> data);
+        printf("next = %p \n", current ->next);
+        current = current -> next;
     }
+    system("pause");
+    return 0;
 }
