@@ -12,3 +12,5 @@
 
 * [Binary_search](https://github.com/bochainwu/Algorithm-exercise/blob/main/binary_seach/binary_serach.cpp)
 * [Sequential_search](https://github.com/bochainwu/Algorithm-exercise/blob/main/sequential_search/sequential_search.cpp)
+# Data structure
+* [Linked_list](https://github.com/bochainwu/Algorithm-exercise/blob/main/linked_list/linked_list.c)
